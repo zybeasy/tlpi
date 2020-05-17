@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zy/ClionProjects/tlpi/chapter34/34_4.cpp
+iostream
+-
+string.h
+-
+signal.h
+-
+unistd.h
+-
+
