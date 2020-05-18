@@ -3,4 +3,4 @@ project(tlpi)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(tlpi main.cpp chapter34/34_3.cpp chapter34/header.h chapter34/34_4.cpp)
+add_executable(tlpi main.cpp chapter34/34_3.cpp chapter34/header.h chapter34/34_4.cpp tmp/tmp.h tmp/tmp.cpp)
