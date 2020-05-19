@@ -1,6 +1,7 @@
 //#include "tmp.h"
 
 #include <iostream>
+#include <cstring>
 #include <unistd.h>
 #include <fcntl.h>
 
@@ -13,8 +14,8 @@ struct Line{
 
 
 void get_cmdlines() {
-//    int f = open("/proc/self/cmdline", O_RDONLY);
-    int f = open("data.txt", O_RDONLY);
+    int f = open("/proc/self/cmdline", O_RDONLY);
+//    int f = open("data.txt", O_RDONLY);
 
     char *tmp = NULL;
     int len = 0;
@@ -37,6 +38,7 @@ void get_cmdlines() {
     }
     close(f);
 
+
     Line *head = NULL, *tail = NULL;
     int start = 0, end = 0;
     for(int i = start; i < len; ++i) {
@@ -46,7 +48,7 @@ void get_cmdlines() {
         end = i;
         if(start != end) {
             Line *line = new Line();
-            line->data = (char*)malloc(sizeof(end - start + 1));
+            line->data = (char*)malloc(sizeof(char) * (end - start + 1));
             line->next = NULL;
             memcpy(line->data, tmp + start, end - start);
             line->data[end - start] = '\0';
@@ -70,7 +72,12 @@ void get_cmdlines() {
         line->data = (char*)malloc(sizeof(char) * (len - start + 1));
         memcpy(line->data, tmp + start, len - start);
         line->data[len - start + 1] = '\0';
-        tail->next = line;
+        line->next = NULL;
+
+        if(head == NULL)
+            head = tail = line;
+        else
+            tail->next = line;
     }
 
     Line *cur = head;
