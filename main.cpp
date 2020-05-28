@@ -12,7 +12,10 @@ int main(int argc, char* argv[]) {
 
 //    sighub_34_4(argc, argv);
 
-    get_cmdlines();
-    cout << "Hello, World!" << endl;
+//    get_cmdlines();
+
+    orphan_pgp_34_7(argc, argv);
+
+    cout << "======================================================" << endl;
     return 0;
 }
