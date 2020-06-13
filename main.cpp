@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <iomanip>
 
 #include <unistd.h>
 
@@ -7,14 +7,18 @@
 #include <pwd.h>
 #include <shadow.h>
 #include <limits.h>
+#include <signal.h>
 #include <string.h>
 
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <time.h>
 
+#include <netdb.h>
+
 #include "chapter15/header.h"
 #include "chapter17/header.h"
+#include "chapter18/header.h"
 #include "chapter34/header.h"
 #include "chapter35/header.h"
 
@@ -32,10 +36,13 @@ int main(int argc, char* argv[]) {
 
 //    orphan_pgp_34_7(argc, argv)
 
-    chapter17(argc, argv);
+//    chapter17(argc, argv);
+//
+//    chapter35(argc, argv);
 
-    chapter35(argc, argv);
+//    chapter18(argc, argv);
 
+    cout << NSIG << endl;
 
     cout << "===================================================" << endl;
     return 0;

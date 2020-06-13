@@ -10,4 +10,4 @@ add_executable(tlpi main.cpp
                chapter34/34_3.cpp chapter34/header.h chapter34/34_4.cpp chapter34/34_7.cpp 
                tmp/tmp.h tmp/tmp.cpp
                chapter15/widgets.cpp chapter15/header.h chapter15/test.cpp 
-               chapter17/header.h chapter17/17_1.cpp chapter35/header.h chapter35/chapter35.cpp)
+               chapter17/header.h chapter17/17_1.cpp chapter35/header.h chapter35/chapter35.cpp chapter18/header.h chapter18/chapter18.cpp chapter19/header.h chapter19/chapter19.cpp)
