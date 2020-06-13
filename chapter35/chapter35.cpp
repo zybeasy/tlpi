@@ -13,15 +13,12 @@ using namespace std;
 int chapter35(int argc, char* argv[]) {
     cout << "PID=" << getpid() << " NICE=" << getpriority(PRIO_PROCESS, 0) << endl;
 
-<<<<<<< HEAD
     cout << SCHED_RR << " " << SCHED_BATCH << endl;
 
     cout << sched_get_priority_min(SCHED_RR) << " " << sched_get_priority_max(SCHED_RR) << endl;
 
     for(int i = 1; i < 10; ++i)
         cout << sched_getscheduler(i) << " " << i << " XXXXXXXX" << endl;
-
-=======
->>>>>>> 2020年 06月 13日 星期六 23:13:45 CST
+    
     return 0;
 }
